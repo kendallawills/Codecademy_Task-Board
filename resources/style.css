@@ -60,9 +60,118 @@ body {
 
 /* SITE BODY */
 
-.container {
-
+.site-body {
+    position: absolute;
+    top: 100px;
+    margin-left: 50px;
 }
+
+.container {
+    width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card-column {
+    min-height: 700px;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-rows: 20px 100px;
+    grid-auto-rows: 100px;
+    gap: 10px;
+    align-content: space-around;
+}
+
+.taskgroup-heading {
+    margin-top: 7px;
+    margin-left: 15px;
+}
+
+.card-column h2 {
+    color: #2f2f2f;
+    font-family: WorkSans;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.ellipsis-icon {
+    display: inline-block;
+    float: right;
+    margin-right: 15px;
+}
+
+/* CARDS */
+
+.card {
+    background-color: rgba(216, 216, 216, 0.21);
+    border: solid 1px rgba(151, 151, 151, 0.21);
+    position: relative;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.rectangle {
+    width: 57px;
+    height: 6px;
+    display: inline-block;
+    position: relative;
+    margin-left: 7px;
+}
+
+.yellow {
+    background-color: #fdcb1e;
+}
+
+.green {
+    background-color: #50e3c2;
+}
+
+.blue {
+    background-color: #3343e5;
+}
+
+.orange {
+    background-color: #ff7700;
+}
+
+.task-description {
+    color: #2f2f2f;
+    font-family: WorkSans;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    text-align: left;
+    margin-top: 0;
+    margin-left: 7px;
+}
+
+.list-icon {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 5px;
+    margin-left: 7px;
+}
+
+.task-date {
+    color: #9b9b9b;
+    font-family: WorkSans;
+    font-size: 10px;
+    letter-spacing: 0.1px;
+    text-align: left;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    margin-bottom: 5px;
+}
+
+/*
 
 input {
 
@@ -75,3 +184,5 @@ input {
 .card-column input {
 
 }
+
+*/
