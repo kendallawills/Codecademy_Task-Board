@@ -146,11 +146,50 @@
                         <img class="list-icon" src="resources/images/list_icon.svg">
                         <p class="task-date">4/23/2017</p>
                     </div>
-
                 </div>
 
+                <!-- COMPLETED PROJECTS -->
+                <div class="card-column completed-projects">
+                    <div class="taskgroup-heading">
+                        <h2>COMPLETED PROJECTS</h2>
+                        <div class="ellipsis-icon">
+                            <img src="resources/images/oval-copy.svg">
+                            <img src="resources/images/oval-copy.svg">
+                            <img src="resources/images/oval-copy.svg">
+                        </div>
+                    </div>
+
+                    <!-- CARDS -->
+                    <div class="card complete-i">
+                        <div class="rectangle yellow"></div>
+                        <div class="rectangle green"></div>
+                        <div class="rectangle blue"></div>
+                        <div class="rectangle orange"></div>
+                        <div class="task-description">Research Trends</div>
+                        <img class="list-icon" src="resources/images/list_icon.svg">
+                        <p class="task-date">4/19/2017</p>
+                    </div>
+
+                    <div class="add-card-container">
+                        <input class="new-card-task" placeholder="Add a card...">
+                        <button class="add-card">Add</button>
+                    </div>
+
+                </div>
             </div>
         </div>
 
     </body>
 </html>
+
+<script>
+	$(document).ready(function(){
+		$(".add-card").on("click", function(){
+			var description = $(".new-card-task").val();
+			var today = new Date();
+			var dateStr = (today.getMonth()+1) + "/" + today.getDate() + "/" + today.getFullYear();
+			var newCard = $(`<div class="card"><div class="rectangle yellow"></div><div class="rectangle green"></div><div class="rectangle blue"></div><div class="rectangle orange"></div><p class="task-description">${description}</p><img class="list-icon" src="https://content.codecademy.com/courses/learn-css-grid/project-ii/Resources/list_icon.svg"><p class="task-date">${dateStr}</p></div>`)
+			$(".add-card-container").before(newCard);
+		})
+	})
+</script>
